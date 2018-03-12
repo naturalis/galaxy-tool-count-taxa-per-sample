@@ -1,0 +1,19 @@
+<tool id="count_taxa_per_sample" name="Sum reads per taxa">
+<description></description>
+<command interpreter="python">count_taxa_per_sample.py $input $output</command>
+<inputs>
+<param format="tabular" name="input" type="data" label="Otu table with identifications"/>
+</inputs>
+<outputs>
+<data format="xlsx" type="data" name="output" label="Sum reads per taxa"/>
+</outputs>
+<tests>
+<test>
+<param name="test_input" value="test_input.txt"/>
+<output name="test_outout" file="test_output.txt"/>
+</test>
+</tests>
+<help>
+This tool merge BLAST output with otu tables
+</help>
+</tool>
